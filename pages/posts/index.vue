@@ -17,6 +17,12 @@ import axios from 'axios';
 export default {
   layout: 'MainLayout',
 
+  head() {
+    return {
+      title: 'Posts | Nuxt Blog',
+    };
+  },
+
   async asyncData() {
     const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
     return { posts: res.data || [] };

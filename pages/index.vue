@@ -5,5 +5,11 @@
 <script>
 export default {
   layout: 'MainLayout',
+
+  head() {
+    return {
+      title: 'Home | Nuxt Blog',
+    };
+  },
 };
 </script>
